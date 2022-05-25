@@ -1,0 +1,41 @@
+import React from 'react'
+import {
+  BellIcon,
+  HashtagIcon,
+  BookmarkIcon,
+  CollectionIcon,
+  DotsCircleHorizontalIcon,
+  MailIcon,
+  UserIcon,
+  HomeIcon,
+} from '@heroicons/react/outline'
+import SidebarRow from './SidebarRow'
+import { signIn, signOut, useSession } from 'next-auth/react'
+
+function Sidebar() {
+  // inside useSession is a property called 'data', renaming it to 'session'
+  const { data: session } = useSession()
+  return (
+    <div className="col-span-2 flex flex-col items-center px-4 md:items-start">
+      <img
+        className="m-3 h-7 w-9"
+        src="https://upload.wikimedia.org/wikipedia/sco/thumb/9/9f/Twitter_bird_logo_2012.svg/1200px-Twitter_bird_logo_2012.svg.png"
+        alt="Twitter logo"
+      />
+      <SidebarRow Icon={HomeIcon} title="Home" />
+      <SidebarRow Icon={HashtagIcon} title="Explore" />
+      <SidebarRow Icon={BellIcon} title="Notifications" />
+      <SidebarRow Icon={MailIcon} title="Messages" />
+      <SidebarRow Icon={BookmarkIcon} title="Bookmarks" />
+      <SidebarRow Icon={CollectionIcon} title="Lists" />
+      <SidebarRow
+        onClick={session ? signOut : signIn}
+        Icon={UserIcon}
+        title={session ? 'Sign out' : 'Sign in'}
+      />
+      <SidebarRow Icon={DotsCircleHorizontalIcon} title="More" />
+    </div>
+  )
+}
+
+export default Sidebar
