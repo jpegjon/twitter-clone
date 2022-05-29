@@ -1,8 +1,16 @@
-# Next.js + Tailwind CSS Example
+## Technologies Used
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+- **[Next.js](https://nextjs.org/)** - 
+- **[Sanity CMS](https://www.sanity.io/)** - Used as the content platform/database to house the tweets
+- **[TypeScript](https://www.typescriptlang.org/)** - Used for strong static typing and help minimize the amount of bugs/warnings in the app.
+- **[Tailwind CSS](https://tailwindcss.com/)** - Used to style the app.
+- **[Toast](https://react-hot-toast.com/) notifications** - Notifications that display when the feed has been refreshed, or when a new tweet has been posted to the timeline.
+- **Next.js Server Side Rendering (SSR)** - Used to fetch the tweets from the Sanity CMS backend.
+- **[GROQ](https://www.sanity.io/docs/overview-groq)** - The language used to query the Sanity CMS backend for tweet fetching.
+- **[NextAuth](https://next-auth.js.org/)** - Used to authenticate a logged in user via the Twitter API.
+- **[Vercel](https://vercel.com/dashboard)** - Used as the deployment platform.
 
-## Deploy your own
+## Features & User Flow
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
 
