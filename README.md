@@ -1,6 +1,6 @@
 ## Technologies Used
 
-- **[Next.js](https://nextjs.org/)** - 
+- **[Next.js](https://nextjs.org/)** - Used as the app framework to handle everything from data fetching, rendering, state management etc.
 - **[Sanity CMS](https://www.sanity.io/)** - Used as the content platform/database to house the tweets
 - **[TypeScript](https://www.typescriptlang.org/)** - Used for strong static typing and help minimize the amount of bugs/warnings in the app.
 - **[Tailwind CSS](https://tailwindcss.com/)** - Used to style the app.
